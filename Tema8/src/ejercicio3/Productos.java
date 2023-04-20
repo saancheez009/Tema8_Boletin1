@@ -4,7 +4,7 @@ public class Productos {
 	
 	String nombre;
 	
-	int precio;
+	static int precio;
 
 	public Productos() {
 		super();
@@ -32,7 +32,15 @@ public class Productos {
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
+
+	@Override
+	public String toString() {
+		return "Productos [nombre=" + nombre + ", precio=" + precio + "]";
+	}
 	
-	
+	static  double Calcular (int cantidadProd) {
+	int	multiplicacion = cantidadProd*precio;
+		return multiplicacion;
+	}
 
 }
