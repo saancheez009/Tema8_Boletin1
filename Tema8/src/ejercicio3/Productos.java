@@ -2,45 +2,67 @@ package ejercicio3;
 
 public class Productos {
 	
-	String nombre;
-	
-	static int precio;
-
+	protected String nombre;
+	protected double precio;
+/**
+ * 
+ */
 	public Productos() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Productos(String nombre, int precio) {
+/**
+ * 
+ * @param nombre
+ * @param precio
+ */
+	public Productos(String nombre, double precio) {
 		super();
 		this.nombre = nombre;
 		this.precio = precio;
 	}
-
+/**
+ * 
+ * @return
+ */
 	public String getNombre() {
 		return nombre;
 	}
-
+/**
+ * 
+ * @param nombre
+ */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	public int getPrecio() {
+/**
+ * 
+ * @return
+ */
+	public double getPrecio() {
 		return precio;
 	}
-
+/**
+ * 
+ * @param precio
+ */
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 
+/**
+ * 
+ * @param cantidad
+ * @return
+ */
+	public double calcular(int cantidad) {
+		return cantidad * precio;
+	}
+
+	
 	@Override
 	public String toString() {
-		return "Productos [nombre=" + nombre + ", precio=" + precio + "]";
-	}
-	
-	static  double Calcular (int cantidadProd) {
-	int	multiplicacion = cantidadProd*precio;
-		return multiplicacion;
+		return nombre + ", " + precio;
 	}
 
 }
